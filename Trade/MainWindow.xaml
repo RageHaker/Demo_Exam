@@ -1,0 +1,19 @@
+﻿<Window x:Class="Trade.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trade"
+        mc:Ignorable="d"
+        Title="Trade" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel VerticalAlignment="Top" Height="100">
+
+            </StackPanel>
+            <StackPanel Height="335" VerticalAlignment="Center">
+                <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Log_in.xaml"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
