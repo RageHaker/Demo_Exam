@@ -14,20 +14,21 @@
                 <TextBlock Width="120" FontSize="15" Margin="5,5,5,5">
                     Введите логин:
                 </TextBlock>
-                <TextBox x:Name="loginBox" Width="120" TextAlignment="Left" Height="20" FontSize="15"/> 
+                <TextBox x:Name="loginBox" Width="200" TextAlignment="Left" Height="24" FontSize="15"/> 
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="120" FontSize="15" Margin="5,5,5,5">
                     Введите пароль:
                 </TextBlock>
-                <TextBox x:Name="passwordBox" Width="120" TextAlignment="Left" Height="20" FontSize="15"/>
+                <PasswordBox x:Name="passwordBox" Width="200" Height="24" FontSize="15"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,15,15,15">
-                <TextBlock x:Name="Captcha" Width="140" Height="30" Text="asdasd" FontFamily="Jokerman" FontSize="20" TextAlignment="Center"/>
+                <TextBlock x:Name="Captcha" Width="140" Height="30" Text="xxxx" FontFamily="Jokerman" FontSize="20" TextAlignment="Center"/>
                 <Button Click="Reroll" Width="80"  Margin="10,0,0,0">Пропустить</Button>
             </StackPanel>
-            <StackPanel>
-                <Button x:Name="btn_login" Width="120" Height="40" Click="Press_login_btn">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox Width="120" Height="24" FontSize="15" TextAlignment="Center" MaxLength="4" x:Name="captchaBox"/>
+                <Button Margin="0,15,0,0" x:Name="btn_login" Width="120" IsEnabled="{Binding AreButtonsIsEnabled}" Height="40" Click="Press_login_btn">
                     Войти
                 </Button>
             </StackPanel>

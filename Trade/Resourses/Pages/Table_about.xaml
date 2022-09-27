@@ -1,0 +1,30 @@
+﻿<Page x:Class="Trade.Resourses.Pages.Table_about"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Trade.Resourses.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1920" d:DesignWidth="1800"
+      Title="Table_about">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <DataGrid x:Name="datagrid_db" FontSize="20" IsReadOnly="True" AutoGenerateColumns="False" Width="1700" Height="620">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="50" Header="Артикуль"/>
+                        <DataGridTextColumn Header="Название"/>
+                        <DataGridTextColumn Header="Описание"/>
+                        <DataGridTextColumn Header="Категория"/>
+                        <DataGridTextColumn Header="Производитель"/>
+                        <DataGridTextColumn Header="Стоимость"/>
+                        <DataGridTextColumn Header="Сумма скидки"/>
+                        <DataGridTextColumn Header="Кол-во товара"/>
+                        <DataGridTextColumn Header="Фото"/>
+                    </DataGrid.Columns> 
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

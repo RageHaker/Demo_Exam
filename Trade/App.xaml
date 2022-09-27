@@ -10,5 +10,11 @@
         <Style TargetType="TextBox">
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
     </Application.Resources>
 </Application>
