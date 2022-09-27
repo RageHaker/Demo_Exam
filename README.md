@@ -31,7 +31,7 @@ namespace Trade.Resourses.Classes
 }
 ```
 2. __Creating Main window__
-Code MainWindow.xaml: 
+  * Code MainWindow.xaml: 
 ```XAML
 <Window x:Class="Trade.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -52,7 +52,7 @@ Code MainWindow.xaml:
         </StackPanel>
     </Grid>
 ```
-Code MainWindow.xaml.cs:
+   * Code MainWindow.xaml.cs:
 ```c#
 using System.Text;
 using System.Threading.Tasks;
