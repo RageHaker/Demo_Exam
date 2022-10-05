@@ -189,7 +189,7 @@ namespace Trade.Resourses.Pages
     }
 }
    ```
-   Creating new class for navigate your menu.
+Creating new class for navigate your menu
    * Class FrameApp.cs:
    ```c#
    using System;
