@@ -9,6 +9,7 @@
 >> 5. :white_check_mark: Creating logic for Log in page
 >> 6. :black_square_button: Creating GridView for data
 >> 7. :black_square_button: Creating logic for GridView page
+>> 8. :black_square_button: Study delegate (try to create page with window)
 >> 8. :black_square_button: Creating profile page
 >> 9. :black_square_button: Creating locic for profile page
 >> 9. *still working hard*
