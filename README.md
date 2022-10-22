@@ -2,16 +2,16 @@
 
 > **Plan**:
 >> 1. :white_check_mark: Add Data Base
->> 2. :white_check_mark: Creating MainWindow (for convenient window layout)
+>> 2. :white_check_mark: Creating MainWindow
 >> 3. :white_check_mark: Creating class to connect DB in code
 >> 3. :white_check_mark: Creating connect to Data Base in MainWindow code
->> 4. :white_check_mark: Creating Log in page
->> 5. :white_check_mark: Creating logic for Log in page
->> 6. :black_square_button: Creating GridView for data
->> 7. :black_square_button: Creating logic for GridView page
->> 8. :black_square_button: Study delegate 
->> 8. :black_square_button: Creating profile page
->> 9. :black_square_button: Creating locic for profile page
+>> 4. :white_check_mark: Creating "Log_in" page
+>> 5. :white_check_mark: Creating logic for "Log_in" page
+>> 6. :white_check_mark: Creating new page "Table_about" for table and some function
+>> 7. :white_check_mark: Creating logic for "Table_about" page
+>> 8. :black_square_button: Creating new page "Config_Table"
+>> 8. :black_square_button: Creating logic for "Config_Table"
+>> 9. :black_square_button: Creating function access for Users 
 >> 9. *still working hard*
 
 
@@ -192,21 +192,149 @@ namespace Trade.Resourses.Pages
     }
 }
    ```
-Creating new class for navigate your menu
-   * Class FrameApp.cs:
-   ```c#
-   using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls; //added
+4. Creating new class for navigate your menu
+  * Class FrameApp.cs:
+```c#
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Text;
+  using System.Threading.Tasks;
+  using System.Windows.Controls; //added
 
-namespace Trade.Resourses.Classes
+  namespace Trade.Resourses.Classes
+  {
+      internal class FrameApp
+      {
+          public static Frame frmobj; // object type Frame
+      }
+  }
+```
+5. __Creating Table_about__
+  * Code Table_about.xaml:
+```xml
+<Grid>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+            <ListView x:Name="LViewProduct" Grid.Column="1" Height="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10" Width="400">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="1" Width="40" Stretch="UniformToFill" Margin="5">
+                                <Image.Source>
+                                    <Binding Path="ProductPhoto">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>\Resourses\Images\picture.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                            <StackPanel Orientation="Vertical" 
+                                    Grid.Column="1">
+                                <TextBlock Text="{Binding ProductName}" Margin="5"/>
+                                <TextBlock Text="{Binding ProductDescription}" Margin="5"/>
+                                <TextBlock Text="{Binding ProductManufacturer}" Margin="5"/>
+                                <TextBlock Text="{Binding ProductCost}" Margin="5"/>
+                            </StackPanel>
+                            <TextBlock Grid.Column="2" Text="{Binding ProductQuantityInStock}" Margin="5"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBox Width="130" Height="30" Name="TxtSearch" Margin="5" TextChanged="TxtSearch_TextChanged"/>
+            <Button Content="Найти/Отменить" Name="BtnSearch" Width="130" Height="30" Margin="5" Click="BtnSearch_Click"/>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10">
+                <TextBlock Text="Сортировка" Width="130" Height="30" Margin="5" HorizontalAlignment="Center"/>
+                <RadioButton Content="По возрастанию" Margin="5" Name="RbUp" Checked="RbUp_Checked"/>
+                <RadioButton Content="По убыванию" Margin="5" Name="RbDown" Checked="RbDown_Checked"/>
+            </StackPanel>
+            <TextBlock Text="Фильтр по производителю" Width="130" Height="30" Margin="5" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="CmbFiltr" Margin="5" SelectionChanged="CmbFiltr_SelectionChanged"/>
+        </StackPanel>
+    </Grid>
+```
+  * Code Table_about.xaml.cs:
+```c#
+using Trade.Resourses.Classes; // path to classes
+namespace Trade.Resourses.Pages
 {
-    internal class FrameApp
+    /// <summary>
+    /// Логика взаимодействия для Table_about.xaml
+    /// </summary>
+    public partial class Table_about : Page
     {
-        public static Frame frmobj; // object type Frame
+        public Table_about()
+        {
+            InitializeComponent();
+
+            LViewProduct.ItemsSource = TradeEntities.GetContext().Product.ToList();
+
+            CmbFiltr.Items.Add("Все производители");
+            foreach (var item in TradeEntities.GetContext().Product.Select(x => x.ProductManufacturer).Distinct().ToList())
+                CmbFiltr.Items.Add(item);
+        }
+
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
+        {//search by clicking on the button
+            string search = TxtSearch.Text;
+            if(TxtSearch.Text != null)
+            LViewProduct.ItemsSource = TradeEntities.GetContext().Product.Where(x=>x.ProductArticleNumber.Contains(search) || x.ProductManufacturer.Contains(search) || x.ProductDescription.Contains(search) || x.ProductCost.ToString().Contains(search)).ToList();
+        }
+
+        private void RbUp_Checked(object sender, RoutedEventArgs e)
+        {//sorting by ascending cost
+            if (TxtSearch.Text != null)
+                LViewProduct.ItemsSource = TradeEntities.GetContext().Product.OrderBy(x=>x.ProductCost).ToList();
+        }
+
+        private void RbDown_Checked(object sender, RoutedEventArgs e)
+        {//sorting by descending cost
+            LViewProduct.ItemsSource = TradeEntities.GetContext().Product.OrderByDescending(x => x.ProductCost).ToList();
+        }
+
+        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {//search after changing the text
+            string search = TxtSearch.Text;
+            if (TxtSearch.Text != null)
+            LViewProduct.ItemsSource = TradeEntities.GetContext().Product.Where(x => x.ProductArticleNumber.Contains(search) || x.ProductManufacturer.Contains(search) || x.ProductDescription.Contains(search) || x.ProductCost.ToString().Contains(search)).ToList();
+        }
+
+        private void CmbFiltr_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LViewProduct.ItemsSource = TradeEntities.GetContext().Product.Where(x => x.ProductManufacturer == CmbFiltr.Text).ToList();
+        }
     }
 }
-   ```
+```
+### P.S.
+> For fast work we need to added some FontFamily. That what i use in "App.xaml":
+>```xaml
+> <Application x:Class="Trade.App"
+>             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+>             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>             xmlns:local="clr-namespace:Trade"
+>             StartupUri="MainWindow.xaml">
+>    <Application.Resources>
+>        <Style TargetType="TextBlock">
+>            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+>        </Style>
+>        <Style TargetType="TextBox">
+>            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+>        </Style>
+>        <Style TargetType="Button">
+>            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+>        </Style>
+>        <Style TargetType="PasswordBox">
+>            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+>        </Style>
+>    </Application.Resources>
+></Application>
+>```
