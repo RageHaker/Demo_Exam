@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Trade.Resourses.Classes;
+using Trade.Resourses.Pages;
 
 
 namespace Trade
@@ -26,6 +27,7 @@ namespace Trade
         public MainWindow()
         {
             InitializeComponent();
+            //FrameApp.frmobj.Navigate(new Table_about());
             FrameApp.frmobj = MainFrame;
             ConnectHelper.obdEnt = new TradeEntities();
         }

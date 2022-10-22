@@ -12,7 +12,7 @@
 
             </StackPanel>
             <StackPanel Height="335" VerticalAlignment="Center">
-                <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Log_in.xaml"/>
+                <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Table_about.xaml"/>
             </StackPanel>
         </StackPanel>
     </Grid>

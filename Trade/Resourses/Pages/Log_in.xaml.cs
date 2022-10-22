@@ -53,7 +53,6 @@ namespace Trade.Resourses.Pages
 
         private void Press_login_btn(object sender, RoutedEventArgs e)
         {
-            /*
             try
             {
                 var userObj = ConnectHelper.obdEnt.User.FirstOrDefault(x => x.UserName.ToLower() == loginBox.Text.ToLower() && x.UserPassword == passwordBox.Password);
@@ -76,7 +75,6 @@ namespace Trade.Resourses.Pages
             {
                 MessageBox.Show("Critical damage" + ex.Message.ToString(), "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            */
         }
 
         public async void timer() // class timer disable button
