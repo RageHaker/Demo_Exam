@@ -101,3 +101,61 @@ D:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CoreCompileInputs.cache
 D:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CopyComplete
 D:\Demo_Exam-main\Trade\obj\Debug\Trade.exe
 D:\Demo_Exam-main\Trade\obj\Debug\Trade.pdb
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.AssemblyReference.cache
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.SuggestedBindingRedirects.cache
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\MainWindow.g.cs
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Log_in.g.cs
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Table_about.g.cs
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\App.g.cs
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade_Content.g.cs
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade_MarkupCompile.cache
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade_MarkupCompile.lref
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.exe
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.pdb
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\Trade.exe.config
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\Trade.exe
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\Trade.pdb
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\EntityFramework.dll
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\EntityFramework.xml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\App.baml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\MainWindow.baml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Log_in.baml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Table_about.baml
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.g.resources
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.Properties.Resources.resources
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.GenerateResource.cache
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Documents\Вариант 4\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CopyComplete
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.AssemblyReference.cache
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.SuggestedBindingRedirects.cache
+F:\Demo_Exam-main\Trade\obj\Debug\MainWindow.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Log_in.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Table_about.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\App.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\Trade_Content.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\Trade_MarkupCompile.cache
+F:\Demo_Exam-main\Trade\obj\Debug\Trade_MarkupCompile.lref
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.exe
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.pdb
+F:\Demo_Exam-main\Trade\bin\Debug\Trade.exe.config
+F:\Demo_Exam-main\Trade\bin\Debug\Trade.exe
+F:\Demo_Exam-main\Trade\bin\Debug\Trade.pdb
+F:\Demo_Exam-main\Trade\bin\Debug\EntityFramework.dll
+F:\Demo_Exam-main\Trade\bin\Debug\EntityFramework.SqlServer.dll
+F:\Demo_Exam-main\Trade\bin\Debug\EntityFramework.xml
+F:\Demo_Exam-main\Trade\bin\Debug\EntityFramework.SqlServer.xml
+F:\Demo_Exam-main\Trade\bin\Debug\ru\EntityFramework.resources.dll
+F:\Demo_Exam-main\Trade\obj\Debug\App.baml
+F:\Demo_Exam-main\Trade\obj\Debug\MainWindow.baml
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Log_in.baml
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\Table_about.baml
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.g.resources
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.Properties.Resources.resources
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.GenerateResource.cache
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CoreCompileInputs.cache
+F:\Demo_Exam-main\Trade\obj\Debug\Trade.csproj.CopyComplete
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\PageEdit.g.cs
+F:\Demo_Exam-main\Trade\obj\Debug\Resourses\Pages\PageEdit.baml

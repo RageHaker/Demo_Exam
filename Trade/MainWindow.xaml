@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trade"
         mc:Ignorable="d"
-        Title="Trade" Height="450" Width="800">
+        Title="Trade" Height="550" Width="800">
     <Grid>
         <StackPanel>
             <StackPanel VerticalAlignment="Top" Height="100">
 
             </StackPanel>
-            <StackPanel Height="335" VerticalAlignment="Center">
+            <StackPanel Height="430" VerticalAlignment="Center">
                 <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Table_about.xaml"/>
             </StackPanel>
         </StackPanel>

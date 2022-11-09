@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Trade.Resourses.Classes;
-using Trade.Resourses.Pages;
 
-
-namespace Trade
+namespace Trade.Resourses.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageEdit.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageEdit : Page
     {
-        public MainWindow()
+        public PageEdit()
         {
             InitializeComponent();
-            FrameApp.frmobj = MainFrame;
-            ConnectHelper.obdEnt = new TradeEntities();
         }
     }
 }
