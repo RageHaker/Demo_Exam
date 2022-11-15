@@ -27,10 +27,13 @@ namespace Trade.Resourses.Pages
         public Log_in()
         {
             InitializeComponent();
-            Roll(); // initialization with load page
+            Roll(); /// initialization with load page
         }
 
-        public void Roll() // class Roll generate random properties
+        /// <summary>
+        /// method Roll generate random properties
+        /// </summary>
+        public void Roll() 
         {
             string allowchar = string.Empty;
             allowchar += "Q,W,E,R,T,Y,U,I,O,P,L,K,J,H,G,F,D,S,Z,X,C,V,B,N,M,q,w,e,r,t,y,u,i,o,p,l,k,j,h,g,f,d,s,a,z,x,c,v,b,n,m,1,2,3,4,5,6,7,8,9,0";
@@ -46,11 +49,17 @@ namespace Trade.Resourses.Pages
             Captcha.Text = pwd;
         }
 
-        private void Reroll(object sender, RoutedEventArgs e) // initialization wirh btn
+        /// <summary>
+        /// initialization wirh btn
+        /// </summary>
+        private void Reroll(object sender, RoutedEventArgs e) 
         {
-            Roll(); // class roll
+            Roll(); /// method roll
         }
 
+        /// <summary>
+        /// Logic for pressing btn Log_in
+        /// </summary>
         private void Press_login_btn(object sender, RoutedEventArgs e)
         {
             try
@@ -59,12 +68,12 @@ namespace Trade.Resourses.Pages
                 if (userObj != null)
                 {
                     MessageBox.Show("Данные отсутствуют или неправильны", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    timer(); // class timer
+                    timer(); /// class timer
                 }
                 else if (captchaBox.Text != Captcha.Text)
                 {
                     MessageBox.Show("Неверная капча", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    timer(); // class timer
+                    timer(); /// class timer
                 }
                 else
                 {
@@ -77,10 +86,13 @@ namespace Trade.Resourses.Pages
             }
         }
 
-        public async void timer() // class timer disable button
+        /// <summary>
+        /// method timer for disable button
+        /// </summary>
+        public async void timer() 
         {
             btn_login.IsEnabled = false;
-            await Task.Delay(10000); // 10000 milliseconds convert into 10 sec
+            await Task.Delay(10000); /// 10000 milliseconds convert into 10 sec
             btn_login.IsEnabled = true;
         }
         

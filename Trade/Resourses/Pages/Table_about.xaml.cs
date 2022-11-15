@@ -38,19 +38,19 @@ namespace Trade.Resourses.Pages
         }
 
         private void RbUp_Checked(object sender, RoutedEventArgs e)
-        {//сортировка по возрастанию стоимости
+        {///сортировка по возрастанию стоимости
             LViewProduct.ItemsSource = TradeEntities.GetContext().Product.
                 OrderBy(x => x.ProductCost).ToList();
         }
 
         private void RbDown_Checked(object sender, RoutedEventArgs e)
-        {//сортировка по убыванию стоимости
+        {///сортировка по убыванию стоимости
             LViewProduct.ItemsSource = TradeEntities.GetContext().Product.
                 OrderByDescending(x => x.ProductCost).ToList();
         }
 
         private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {//поиск
+        {///поиск
             string search = TxtSearch.Text;
             if (TxtSearch.Text != null)
                 LViewProduct.ItemsSource = TradeEntities.GetContext().Product.Where(x => x.ProductManufacturer.Contains(search)
@@ -64,7 +64,7 @@ namespace Trade.Resourses.Pages
         }
 
         private void CmbFiltr_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {//фильтрация по производителю
+        {///фильтрация по производителю
 
             if (CmbFiltr.SelectedValue.ToString() == "Все производители")
             {
@@ -100,12 +100,12 @@ namespace Trade.Resourses.Pages
 
         private void Edit_data(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmobj.Navigate(new PageEdit());
+            FrameApp.frmobj.Navigate(new Edit_data());
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameApp.frmobj.Navigate(new Add_data());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Page x:Class="Trade.Resourses.Pages.PageEdit"
+﻿<Page x:Class="Trade.Resourses.Pages.Edit_data"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,40 +6,67 @@
       xmlns:local="clr-namespace:Trade.Resourses.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageEdit">
-
+      Title="Edit_data">
+    <Page.Resources>
+        <Style x:Key="Editor">
+            <Setter Property="ItemsControl.Width" Value="130"/>
+            <Setter Property="ItemsControl.Width" Value="30"/>
+            <Setter Property="ItemsControl.Width" Value="5"/>
+        </Style>
+    </Page.Resources>
+    
+    
     <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                <TextBox/>
+                <TextBlock Text="Артикул" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductArticle" Style="{StaticResource Editor}" 
+                         Text="{Binding ProductArticleNumber}"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                <ComboBox></ComboBox>
+                <TextBlock Text="Наименование" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductName" Style="{StaticResource Editor}" 
+                         Text="{Binding ProductName}"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                <TextBox/>
+                <TextBlock Text="Категория" Style="{StaticResource Editor}"/>
+                <ComboBox Name="CmbProductCategory" Style="{StaticResource Editor}"
+                     SelectedValue="{Binding ProductCategory}"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                
+                <TextBlock Text="Количество на складе" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductQuantytiInStock" Style="{StaticResource Editor}"
+                         Text="{Binding ProductQuantityInStock}"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                
+                <TextBlock Text="Единица измерения" Style="{StaticResource Editor}"/>
+                <ComboBox Name="CmbProductEdin" Style="{StaticResource Editor}"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
-                <TextBlock/>
-                
+                <TextBlock Text="Поставщик" Style="{StaticResource Editor}"/>
+                <ComboBox Name="CmbProductManufacturer" Style="{StaticResource Editor}"
+                          SelectedValue="{Binding ProductManufacturer}"/>
             </StackPanel>
-            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Стоимость за единицу" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductCost" Style="{StaticResource Editor}"
+                         Text="{Binding ProductCost}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Изображение" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductImage" Style="{StaticResource Editor}"
+                         Text="{Binding ProductPhoto}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Описание" Style="{StaticResource Editor}"/>
+                <TextBox Name="TxtProductDescription" Style="{StaticResource Editor}"
+                         Text="{Binding ProductDescription}"/>
+            </StackPanel>
+            <Button Content="Сохранить"
+                    Name="BtnSave"
+                    Style="{StaticResource Editor}"
+                    Click="BtnSave_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -126,11 +126,11 @@
     <Compile Include="Resourses\Pages\Add_data.xaml.cs">
       <DependentUpon>Add_data.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resourses\Pages\Log_in.xaml.cs">
-      <DependentUpon>Log_in.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Resourses\Pages\Edit_data.xaml.cs">
       <DependentUpon>Edit_data.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resourses\Pages\Log_in.xaml.cs">
+      <DependentUpon>Log_in.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resourses\Pages\Table_about.xaml.cs">
       <DependentUpon>Table_about.xaml</DependentUpon>
@@ -151,11 +151,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resourses\Pages\Log_in.xaml">
+    <Page Include="Resourses\Pages\Edit_data.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resourses\Pages\Edit_data.xaml">
+    <Page Include="Resourses\Pages\Log_in.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

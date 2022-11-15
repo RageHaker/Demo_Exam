@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Demo_Exam-main\Trade\obj\Debug\
+C:\Users\Danila\Documents\GitHub\Demo_Exam\Trade\obj\Debug\
 Trade
 none
 false
 DEBUG;TRACE
-F:\Demo_Exam-main\Trade\App.xaml
+C:\Users\Danila\Documents\GitHub\Demo_Exam\Trade\App.xaml
 51131312106
 2519211857
 24-1935486539
-18-72164191
-MainWindow.xaml;Resourses\Pages\Add_data.xaml;Resourses\Pages\Log_in.xaml;Resourses\Pages\Edit_data.xaml;Resourses\Pages\Table_about.xaml;
+181931546123
+MainWindow.xaml;Resourses\Pages\Add_data.xaml;Resourses\Pages\Edit_data.xaml;Resourses\Pages\Log_in.xaml;Resourses\Pages\Table_about.xaml;
 
-False
+True
 

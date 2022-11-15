@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trade"
         mc:Ignorable="d"
-        Title="Trade" Height="550" Width="800">
+        Title="Trade" 
+        Height="550" Width="800" 
+        MinHeight="550" MinWidth="800"
+        Icon="/Resourses/Images/icon.ico">
     <Grid>
         <StackPanel>
-            <StackPanel VerticalAlignment="Top" Height="100">
-
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100">
+                <Image Source="/Resourses/Images/logo.png"/>
+                <TextBlock/>
             </StackPanel>
             <StackPanel Height="430" VerticalAlignment="Center">
-                <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Table_about.xaml"/>
+                <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Source="Resourses/Pages/Log_in.xaml"/>
             </StackPanel>
         </StackPanel>
     </Grid>
