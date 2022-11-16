@@ -9,8 +9,9 @@
 >> 5. :white_check_mark: Creating logic for "Log_in" page
 >> 6. :white_check_mark: Creating new page "Table_about" for table and some function
 >> 7. :white_check_mark: Creating logic for "Table_about" page
->> 8. :black_square_button: Creating new page "Config_Table"
->> 8. :black_square_button: Creating logic for "Config_Table"
+>> 8. :white_check_mark: Creating method Delete
+>> 8. :white_check_mark: Creating new page "Edit_data"
+>> 8. :white_check_mark: Creating logic for "Edit_data"
 >> 9. :black_square_button: Creating function access for Users 
 >> 9. *still working hard*
 
